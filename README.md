@@ -4,14 +4,14 @@ Google Earth Engine API is available here: https://github.com/google/earthengine
 
 ## Repository Contents
 
-- **Sentinel-1 Data Processing:**
-  - **`sentinel1_processing.js`**: Filters and analyzes Sentinel-1 SAR data. This script performs cloud masking, image mosaicking, and statistical analysis of VV and VH polarization bands. It separates images by orbit direction, creates mosaics for each date, and calculates mean values for specific bands.
+- **NDWI Calculation:**
+  - **`ndwi_calc.js`**: Calculates the Normalized Difference Water Index (NDWI) from Sentinel-2 imagery. This script filters Sentinel-2 images based on date and geographic bounds, selects the image with the least cloud coverage, computes the NDWI using the Green (B3) and Near-Infrared (B8) bands, and exports the NDWI values for further analysis.
 
-- **Sentinel-2 Data Processing:**
-  - **`sentinel2_processing.js`**: Masks clouds in Sentinel-2 images using the QA60 band and visualizes RGB composites. This script filters images based on cloud cover and geographic bounds, applies a cloud masking function, and sets up the images for visualization.
+- **Cloud Masking:**
+  - **`cloud_masking.js`**: Contains a function to mask clouds in Sentinel-2 imagery using the QA60 band. The script filters Sentinel-2 images based on date and cloud cover percentage, applies the cloud masking function, and visualizes the images. It is designed to reduce cloud interference for more accurate analysis and visualization.
 
-- **Utilities and Functions:**
-  - **`utils.js`**: Contains custom functions used for data preprocessing and analysis, such as cloud masking functions for Sentinel-2 imagery.
+- **SAR Data Processing:**
+  - **`sar_processing.js`**: Processes Sentinel-1 Synthetic Aperture Radar (SAR) data. This script filters Sentinel-1 images by date, orbit direction, and polarization bands (VV and VH). It creates mosaics for each distinct date, computes the mean values of VV and VH bands, and prepares the data for visualization and analysis. It also includes functionality for plotting VH mean values over time.
 
 ## Getting Started
 
